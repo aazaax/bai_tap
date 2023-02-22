@@ -1,6 +1,6 @@
 import React from 'react'
-import Formtutor from '@/components/formtutor'
-import Tableuser from '@/components/Tableuser'
+import Formtutor from '@/components/Formtutor'
+import Tableuser from '@/components/TableUser'
 
 export default function Learn() {
   return (
