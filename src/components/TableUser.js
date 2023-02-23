@@ -6,7 +6,7 @@ import React from 'react'
 export default function TableUser() {
     const {data, isLoading} = useGetUsersQuery()
     const [useDelete, { isLoading: isLoadingDelete }] = useDeleteUserMutation()
-    const handleDelete = (id) => {
+    const HandleDelete = (id) => {
         console.log(id)
         useDelete(id).unwrap().then(res => {
             message.success("User deleted")
@@ -53,7 +53,7 @@ export default function TableUser() {
         render: (value, record) =>{
         return ( <>
             <Tag color="blue" style={{cursor:"pointer"}} onClick={()=>{}}>Edit</Tag>
-            <Tag color="red" style={{cursor:"pointer"}} onClick={()=> handleDelete(record.id)}>Delete</Tag>
+            <Tag color="red" style={{cursor:"pointer"}} onClick={()=> HandleDelete(record.id)}>Delete</Tag>
             </>
         )
         }
